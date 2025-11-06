@@ -97,6 +97,7 @@ h1, h2 {
 .second { 
     flex: 0.5; 
     filter: invert(100%) brightness(100%);
+    transition: transform 0.3s ease; /* <--- adds smooth animation */
 }  
 .second:hover {
     transform: scale(1.20);
@@ -104,6 +105,7 @@ h1, h2 {
 .third { 
     flex: 0.5; 
     filter: invert(100%) brightness(100%);
+    transition: transform 0.3s ease; /* <--- adds smooth animation */
 }
 .third:hover {
     transform: scale(1.20);
@@ -111,6 +113,7 @@ h1, h2 {
 .fourth { flex: 1; }
 .fourth:hover {
     transform: scale(1.20);
+    transition: transform 0.3s ease; /* <--- adds smooth animation */
 }
 
 /* ==========================
@@ -220,3 +223,4 @@ h1, h2 {
     font-size: 28px;
   }
 }
+
