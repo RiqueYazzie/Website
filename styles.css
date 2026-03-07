@@ -2,229 +2,118 @@ body {
   font-family: 'Lora', serif;
   font-weight: normal;
 }
-.hero-wrapper, 
-.hero-wrapper h1, 
-.hero-wrapper h2, 
-.hero-wrapper p, 
-.hero-wrapper div {
-  color: #ffffff !important;
-}
-.header-container {
-  font-size: 16px;
-}
-
-.cello-first {
-  font-size: 20px;
-}
-
 .container {
   color: rgb(107, 33, 176); /* purple text */
   font-family: 'Georgia', serif;
   padding: 80px 60px;
 }
-h1, h2 {
-  font-weight: bold;
-}
-
-
-/* ==========================
-   RESPONSIVE IMAGE
-========================== */
-.responsive-img {
-  display: block;
-  margin: 0 auto;
-  width: 700px;
-  height: auto;
-  max-width: 100%;
-}
-
-
-
-/* ==========================
-   HERO WRAPPER (Shared Background)
-========================== */
-.hero-wrapper {
-  background-image: url('./celloPlayer.jpg'); /* 🔸 Replace with your image file */
+.hero {
+  background-image: url("./photos/celloPlayer.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   position: relative;
-  min-height: 80vh; /* Full screen height */
+  color: white;
 }
-
-/* Optional overlay for better text contrast */
-.hero-wrapper::before {
+.hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.35); /* subtle dark overlay */
-  z-index: 0;
+  background: rgba(0,0,0,0.35);
 }
 
-/* Make content sit above overlay */
-.hero-wrapper > * {
+.hero * {
   position: relative;
   z-index: 1;
 }
+.header {
+  padding: 20px 40px 80px 40px;
+}
 
-/* ==========================
-   HEADER CONTAINER
-========================== */
-.header-container {
+.header-top {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  z-index: 1000;
-  gap: 10px;
-  padding: 8px 16px;
-  background: transparent; /* background handled by wrapper */
-}
-
-
-
-/* Header cards */
-.card {
-  background: transparent;
-  border: none;
-  height: 50px;
-  display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-/* Flex ratios */
-.first { flex: 6; }       /* name/title area */
-.second { 
-    flex: 0.5; 
-    filter: invert(100%) brightness(100%);
-    transition: transform 0.3s ease; /* <--- adds smooth animation */
-}  
-.second:hover {
-    transform: scale(1.20);
-}
-.third { 
-    flex: 0.5; 
-    filter: invert(100%) brightness(100%);
-    transition: transform 0.3s ease; /* <--- adds smooth animation */
-}
-.third:hover {
-    transform: scale(1.20);
-}
-.fourth { 
-  flex: 1; 
-   transition: transform 0.3s ease; /* <--- adds smooth animation */      
-}
-.fourth:hover {
-    transform: scale(1.20);
+.header-title {
+  font-size: 18px;
+  letter-spacing: 1px;
 }
 
-/* ==========================
-   CELLO CONTAINER (below header)
-========================== */
-.cello-container {
+.header-icons {
   display: flex;
+  gap: 20px;
   align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  padding: 60px 16px; /* adds spacing for balance */
 }
 
-.cello-text {
-  background: transparent;
-  border: none;
+.header-icons img {
+  width: 26px;
+  filter: invert(100%);
+  transition: transform 0.3s ease;
+}
+
+.header-icons img:hover {
+  transform: scale(1.2);
+}
+
+.contact {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contact:hover {
+  transform: scale(1.1);
+}
+.header-bottom {
   display: flex;
+  margin-top: 80px;
   align-items: center;
-  justify-content: center;
 }
 
-.cello-first { 
-  flex: 1.5; 
-  font-size: 50px
-}
-.cello-second { flex: 1; }
-
-
-/* about section */
-.about-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0;
-  gap: 0;
-  height: 80vh; /* adjust as needed */
-}
-
-.about-first {
+.hero-text-large {
   flex: 1;
-  font-size: 10px;
-  line-height: 1.7;
-  padding: 20px; /* optional for readability */
+  text-align: center;
+  font-size: 52px;
+  padding: 30px;
+  align-items: center;
 }
 
-.about-second {
+
+.hero-text-small {
   flex: 1;
-  background-image: url('./LoralynnImage.png');
-  background-size: contain;  /* or cover, depending on your preference */
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100%;
+  text-align: center;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
 }
 
 
-@media (max-width: 1024px) {
-  .responsive-img {
-    width: 500px;
-  }
 
-  /* About section responsive (covers up to laptops/tablets) */
-  .about-container {
-    flex-direction: column-reverse;
-    height: auto;
-  }
 
-  .about-second {
-    width: 100%;
-    height: 60vh; /* a bit larger for laptops */
-    background-size: cover;
-  }
 
-  .about-first {
-    padding: 20px;
+
+@media (max-width: 768px) {
+
+  .header-top {
+    flex-direction: column;
+    gap: 15px;
     text-align: center;
   }
 
-  .cello-first { 
-    flex: 1.5; 
-    font-size: 32px;
+  .header-icons {
+    justify-content: center;
   }
+
+  .header-bottom {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .hero-text-large {
+    font-size: 36px;
+  }
+
+  
 }
-
-@media (max-width: 600px) {
-  .responsive-img {
-    width: 100%;
-  }
-
-  .about-container {
-    flex-direction: column-reverse;
-    height: auto;
-  }
-
-  .about-second {
-    width: 100%;
-    height: 50vh; /* smaller height for phones */
-    background-size: cover;
-  }
-
-  .about-first {
-    padding: 15px;
-    text-align: center;
-  }
-
-  .cello-first { 
-    flex: 1.5; 
-    font-size: 28px;
-  }
-}
-
-
-
