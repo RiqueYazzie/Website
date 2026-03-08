@@ -26,7 +26,7 @@ body {
   z-index: 1;
 }
 .header {
-  padding: 20px 40px 80px 40px;
+  padding: 20px 60px 80px 60px;
 }
 
 .header-top {
@@ -35,15 +35,22 @@ body {
   align-items: center;
 }
 
-.header-title {
-  font-size: 18px;
-  letter-spacing: 1px;
-}
-
 .header-icons {
   display: flex;
   gap: 20px;
   align-items: center;
+}
+
+.header-title {
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px; /* vertical + horizontal spacing */
+  margin: 15px;
 }
 
 .header-icons img {
@@ -61,11 +68,7 @@ body {
   transition: transform 0.3s ease;
 }
 
-.header-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 20px; /* vertical + horizontal spacing */
-}
+
 
 .contact:hover,
 .page-link:hover {
@@ -83,14 +86,16 @@ body {
   flex: 1;
   text-align: center;
   font-size: 52px;
-  padding: 30px;
+  padding: 0px;
   align-items: center;
+  margin-right: 20px;
 }
 
 
 .hero-text-small {
   flex: 1;
   text-align: center;
+  margin-left: 20px;
 }
 
 .responsive-img {
@@ -118,14 +123,82 @@ body {
   .header-bottom {
     flex-direction: column;
     gap: 25px;
+    margin-top: 10px;
   }
 
   .hero-text-large {
-    font-size: 36px;
+    font-size: 30px;
   }
   .header-links {
     justify-content: center;
+    margin-top: 30px;
   }
 
   
+}
+@media (max-width: 375px) {
+
+  .header-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header-icons {
+    justify-content: center;
+  }
+
+  .header-bottom {
+    flex-direction: column;
+    display: flex;
+    margin-top: 30px;
+    align-items: center;
+  }
+
+
+  .hero-text-large {
+    font-size: 30px;
+  }
+  .header-links {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 20px; /* vertical + horizontal spacing */
+    margin: 0px
+  }
+
+  
+
+  
+}
+
+.screen-test {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  z-index: 9999;
+}
+
+/* Phone */
+@media (max-width: 375px) {
+  .screen-test::after {
+    content: "375px";
+  }
+}
+
+/* Tablet */
+@media (min-width: 376px) and (max-width: 744px) {
+  .screen-test::after {
+    content: "744px";
+  }
+}
+
+/* Desktop */
+@media (min-width: 745px) {
+  .screen-test::after {
+    content: "1280px";
+  }
 }
