@@ -61,6 +61,12 @@ body {
   transition: transform 0.3s ease;
 }
 
+.header-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px; /* vertical + horizontal spacing */
+}
+
 .contact:hover,
 .page-link:hover {
   transform: scale(1.1);
@@ -116,6 +122,9 @@ body {
 
   .hero-text-large {
     font-size: 36px;
+  }
+  .header-links {
+    justify-content: center;
   }
 
   
