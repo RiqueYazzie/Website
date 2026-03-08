@@ -5,7 +5,7 @@ body {
 .container {
   color: rgb(107, 33, 176); /* purple text */
   font-family: 'Georgia', serif;
-  padding: 80px 60px;
+  padding: 10px 60px;
 }
 .hero {
   background-image: url("./photos/celloPlayer.jpg");
@@ -50,7 +50,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 10px 20px; /* vertical + horizontal spacing */
-  margin: 15px;
+  margin: 0;
 }
 
 .header-icons img {
@@ -110,9 +110,12 @@ body {
 
 @media (max-width: 768px) {
 
+  .header {
+    padding: 10px 10px 50px 10px;
+  }
   .header-top {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
     text-align: center;
   }
 
@@ -130,8 +133,8 @@ body {
     font-size: 30px;
   }
   .header-links {
+
     justify-content: center;
-    margin-top: 30px;
   }
 
   
@@ -139,7 +142,7 @@ body {
 @media (max-width: 375px) {
 
   .header {
-    padding: 20px 10px 50px 10px;
+    padding: 10px 10px 50px 10px;
   }
   .header-top {
     flex-direction: column;
