@@ -2,17 +2,58 @@ body {
   font-family: 'Lora', serif;
   font-weight: normal;
 }
+
+.mobile-header {
+  display: none;
+}
+.navbar .navbar-brand {
+  color: white;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar .nav-link:hover {
+  color: #ddd; /* optional hover effect */
+}
+.navbar-toggler {
+  border-color: white;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+/* Dark transparent background for mobile dropdown */
+.navbar-collapse {
+  background: rgba(49, 49, 49, 0.384);
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Make links white */
+.navbar .nav-link {
+  color: white;
+}
+
+/* Hover effect */
+.navbar .nav-link:hover {
+  color: #ddd;
+}
+
 .container {
   color: rgb(107, 33, 176); /* purple text */
   font-family: 'Georgia', serif;
   padding: 10px 60px;
 }
+
 .hero {
   background-image: url("./photos/celloPlayer.jpg");
   background-size: cover;
   background-position: center;
   position: relative;
   color: white;
+  padding: 10px 10px 30px 10px;
 }
 .hero::before {
   content: "";
@@ -21,12 +62,12 @@ body {
   background: rgba(0,0,0,0.35);
 }
 
-.hero * {
+.hero {
   position: relative;
   z-index: 1;
 }
 .header {
-  padding: 20px 60px 80px 60px;
+  padding: 10px 60px 0px 60px;
 }
 
 .header-top {
@@ -110,8 +151,14 @@ body {
 
 @media (max-width: 768px) {
 
+  .mobile-header {
+    display: flex;
+  }
+  .desktop-header {
+    display: none;
+  }
   .header {
-    padding: 10px 10px 50px 10px;
+    padding: 10px 10px 30px 10px;
   }
   .header-top {
     flex-direction: column;
@@ -126,7 +173,7 @@ body {
   .header-bottom {
     flex-direction: column;
     gap: 25px;
-    margin-top: 10px;
+    margin-top: 0px;
   }
 
   .hero-text-large {
